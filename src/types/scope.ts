@@ -4,4 +4,5 @@ export type Scope =
 | 'write_project'
 | 'read_organization'
 | 'write_organization'
-| 'full_access';
+| 'full_access'
+| 'none';

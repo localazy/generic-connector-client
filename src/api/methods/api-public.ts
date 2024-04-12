@@ -8,7 +8,7 @@ export class ApiPublic extends ApiBase {
    *
    * @param config Axios request config
    */
-  public async generateKeys(config?: AxiosRequestConfig): Promise<GeneratedKeys> {
-    return this.api.client.get('/public/generate-keys', { ...config });
+  public async keys(config?: AxiosRequestConfig): Promise<GeneratedKeys> {
+    return this.api.client.get('/public/keys', { ...config });
   }
 }

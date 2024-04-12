@@ -1,5 +1,11 @@
 import { OAuthAuthorizationUrlRequest } from '~/types/oauth-authorization-url-request';
 
+/**
+ * Get OAuth authorization URL for the given request
+ * @param query OAuth authorization URL request
+ * @param baseUrl Base URL (can be with path), if passed, it will be used instead of `https://localazy.com`
+ * @returns OAuth authorization URL
+ */
 export function getOAuthAuthorizationUrl(
   query: OAuthAuthorizationUrlRequest,
   baseUrl?: string,
@@ -30,5 +36,13 @@ export function getOAuthAuthorizationUrl(
   if (query.minimalRole) {
     params.append('minimal_role', query.minimalRole);
   }
-  return `${baseUrl || 'https://localazy.com'}/oauth/authorize?${params.toString()}`;
+
+  const localUrl = baseUrl || 'https://localazy.com';
+  const doesUrlContainPath = new URL(localUrl).pathname !== '/';
+
+  if (!doesUrlContainPath) {
+    return `${localUrl}/oauth/authorize?${params.toString()}`;
+  }
+
+  return `${localUrl}?${params.toString()}`;
 }

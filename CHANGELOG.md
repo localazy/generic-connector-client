@@ -1,3 +1,17 @@
+## 0.2.1 (2024-04-22)
+### 🔀 Pull Requests
+
+- [Add vite and fetch #5](https://github.com/localazy/generic-connector-client/pull/5)
+- [use Vite #3](https://github.com/localazy/generic-connector-client/pull/3)
+
+### 🧰 Other Commits
+
+- ignore `CHANGELOG.md` for lint ([9b6f043](https://github.com/localazy/generic-connector-client/commit/9b6f043)) ([#5](https://github.com/localazy/generic-connector-client/pull/5))
+- run lint fix ([9b6f043](https://github.com/localazy/generic-connector-client/commit/9b6f043)) ([#5](https://github.com/localazy/generic-connector-client/pull/5))
+- use Vite ([9b6f043](https://github.com/localazy/generic-connector-client/commit/9b6f043)) ([#5](https://github.com/localazy/generic-connector-client/pull/5))
+- run lint fix ([1d19566](https://github.com/localazy/generic-connector-client/commit/1d19566)) ([#3](https://github.com/localazy/generic-connector-client/pull/3))
+- use Vite ([1d19566](https://github.com/localazy/generic-connector-client/commit/1d19566)) ([#3](https://github.com/localazy/generic-connector-client/pull/3))
+
 # 0.2.0 (2024-04-12)
 
 ### ✨ Features

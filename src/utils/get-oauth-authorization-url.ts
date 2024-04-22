@@ -1,4 +1,4 @@
-import { OAuthAuthorizationUrlRequest } from '~/types/oauth-authorization-url-request';
+import { OAuthAuthorizationUrlRequest } from '@/types/oauth-authorization-url-request';
 
 /**
  * Get OAuth authorization URL for the given request

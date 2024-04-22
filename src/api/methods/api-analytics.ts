@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from 'axios';
-import { ApiBase } from '~/api/methods/api-base';
-import { AnalyticsTrackRequest } from '~/types/analytics-track-request';
-import { AnalyticsTrackResponse } from '~/types/analytics-track-response';
+import { ApiBase } from '@/api/methods/api-base';
+import { AnalyticsTrackRequest } from '@/types/analytics-track-request';
+import { AnalyticsTrackResponse } from '@/types/analytics-track-response';
 
 export class ApiAnalytics extends ApiBase {
   public async track(

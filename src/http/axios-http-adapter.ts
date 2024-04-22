@@ -1,9 +1,9 @@
 import axios, {
   CreateAxiosDefaults, AxiosInstance, AxiosResponse, AxiosRequestConfig,
 } from 'axios';
-import { Services } from '~/enums/service';
-import { IHttpAdapter } from '~/http/i-http-adapter';
-import { GenericConnectorClientOptions } from '~/types/generic-connector-client-options';
+import { Services } from '@/enums/service';
+import { IHttpAdapter } from '@/http/i-http-adapter';
+import { GenericConnectorClientOptions } from '@/types/generic-connector-client-options';
 
 export class AxiosHttpAdapter implements IHttpAdapter {
   public client: IHttpAdapter;

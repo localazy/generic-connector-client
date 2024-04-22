@@ -12,7 +12,7 @@ permissions:
 jobs:
   ci:
     name: CI Init
-    runs-on:  self-hosted, Linux]
+    runs-on: [self-hosted, Linux]
     outputs:
       action: ${{ steps.init.outputs.action }}
     steps:

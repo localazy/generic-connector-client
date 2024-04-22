@@ -6,10 +6,7 @@ import { OAuthAuthorizationUrlRequest } from '@/types/oauth-authorization-url-re
  * @param baseUrl Base URL (can be with path), if passed, it will be used instead of `https://localazy.com`
  * @returns OAuth authorization URL
  */
-export function getOAuthAuthorizationUrl(
-  query: OAuthAuthorizationUrlRequest,
-  baseUrl?: string,
-) {
+export function getOAuthAuthorizationUrl(query: OAuthAuthorizationUrlRequest, baseUrl?: string) {
   const params = new URLSearchParams();
   params.append('client_id', query.clientId);
   if (query.redirectUri) {

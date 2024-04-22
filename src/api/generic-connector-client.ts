@@ -1,5 +1,4 @@
-import { CreateAxiosDefaults } from 'axios';
-import { AxiosHttpAdapter } from '@/http/axios-http-adapter';
+import { FetchHttpAdapter } from '@/http/fetch-http-adapter';
 import { IHttpAdapter } from '@/http/i-http-adapter';
 import { GenericConnectorClientOptions } from '@/types/generic-connector-client-options';
 import { ApiPublic } from '@/api/methods/api-public';
@@ -15,8 +14,8 @@ export class GenericConnectorClient {
 
   public analytics: ApiAnalytics;
 
-  constructor(options: GenericConnectorClientOptions, config?: CreateAxiosDefaults) {
-    this.client = new AxiosHttpAdapter(options, config);
+  constructor(options: GenericConnectorClientOptions) {
+    this.client = new FetchHttpAdapter(options);
 
     this.public = new ApiPublic(this);
     this.oauth = new ApiOAuth(this);

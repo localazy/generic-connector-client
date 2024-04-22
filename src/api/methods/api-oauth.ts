@@ -1,18 +1,18 @@
-import { AxiosRequestConfig } from 'axios';
+import { RequestConfig } from '@/types/request-config';
 import { OAuthPollRequest } from '@/types/oauth-poll-request';
 import { ApiBase } from './api-base';
 import { PollResponse, PollResponseCompleted } from '@/main';
 import { OAuthContinuousPollRequest } from '@/types/oauth-continuous-poll-request';
 
 export class ApiOAuth extends ApiBase {
-  public async poll(request: OAuthPollRequest, config?: AxiosRequestConfig): Promise<PollResponse> {
-    return this.api.client.get('/oauth/poll', {
+  public async poll(request: OAuthPollRequest, config?: RequestConfig): Promise<PollResponse> {
+    return (await this.api.client.get('/oauth/poll', {
       ...config,
       params: {
         ...config?.params,
         ...request,
       },
-    });
+    })) as PollResponse;
   }
 
   /**
@@ -22,7 +22,7 @@ export class ApiOAuth extends ApiBase {
    */
   public async continuousPoll(
     request: OAuthContinuousPollRequest,
-    config?: AxiosRequestConfig,
+    config?: RequestConfig,
   ): Promise<PollResponseCompleted> {
     const POLLING_LIMIT = request.pollingMaxAttempts || 60;
     const INTERVAL_PERIOD = request.pollingIntervalMs || 2000;

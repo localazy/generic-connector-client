@@ -1,8 +1,8 @@
-import { OAuthAccessTokenResponse } from '~/types/oauth-access-token-response';
+import { OAuthAccessTokenResponse } from '@/types/oauth-access-token-response';
 
 export type PollResponsePending = {
   completed: false;
-  data: {};
+  data: Record<string, never>;
 };
 
 export type PollResponseCompleted = {

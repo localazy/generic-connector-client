@@ -1,7 +1,7 @@
 import { Locales } from '@localazy/languages';
-import { Scope } from '~/types/scope';
-import { ProjectType } from '~/types/project-type';
-import { MinimalRole } from '~/types/minimal-role';
+import { Scope } from '@/types/scope';
+import { ProjectType } from '@/types/project-type';
+import { MinimalRole } from '@/types/minimal-role';
 
 export type OAuthAuthorizationUrlRequest = {
   /**

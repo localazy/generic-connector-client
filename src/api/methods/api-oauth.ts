@@ -1,8 +1,8 @@
 import { AxiosRequestConfig } from 'axios';
-import { OAuthPollRequest } from '~/types/oauth-poll-request';
+import { OAuthPollRequest } from '@/types/oauth-poll-request';
 import { ApiBase } from './api-base';
-import { PollResponse, PollResponseCompleted } from '~/main';
-import { OAuthContinuousPollRequest } from '~/types/oauth-continuous-poll-request';
+import { PollResponse, PollResponseCompleted } from '@/main';
+import { OAuthContinuousPollRequest } from '@/types/oauth-continuous-poll-request';
 
 export class ApiOAuth extends ApiBase {
   public async poll(request: OAuthPollRequest, config?: AxiosRequestConfig): Promise<PollResponse> {
@@ -32,6 +32,7 @@ export class ApiOAuth extends ApiBase {
     let result = await this.poll({ readKey: request.readKey }, config);
     if (!result.completed) {
       return new Promise((resolve, reject) => {
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         const pollInterval = setInterval(async (): Promise<any> => {
           result = await this.poll({ readKey: request.readKey }, config);
 

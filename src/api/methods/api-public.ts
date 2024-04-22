@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
-import { ApiBase } from '~/api/methods/api-base';
-import { GeneratedKeys } from '~/types/generated-keys';
+import { ApiBase } from '@/api/methods/api-base';
+import { GeneratedKeys } from '@/types/generated-keys';
 
 export class ApiPublic extends ApiBase {
   /**

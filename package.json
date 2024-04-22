@@ -1,6 +1,6 @@
 {
   "name": "@localazy/generic-connector-client",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node.js module that allows to interact with the Localazy Generic Connector.",
   "author": "Localazy <team@localazy.com>",
   "license": "MIT",

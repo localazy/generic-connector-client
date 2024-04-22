@@ -29,20 +29,20 @@ export default defineConfig({
         // Node ES Module
         {
           format: 'esm',
-          entryFileNames: 'localazy-api-client.js',
+          entryFileNames: 'localazy-generic-connector-client.js',
           banner,
         },
         // Node CommonJS
         {
           format: 'cjs',
           dir: 'dist/node',
-          entryFileNames: 'localazy-api-client.cjs',
+          entryFileNames: 'localazy-generic-connector-client.cjs',
           banner,
         },
         // Browser ES Module
         {
           format: 'esm',
-          entryFileNames: 'localazy-api-client.min.js',
+          entryFileNames: 'localazy-generic-connector-client.min.js',
           banner,
           plugins: [terser()],
         },
@@ -50,7 +50,7 @@ export default defineConfig({
         {
           format: 'umd',
           dir: 'dist/browser',
-          entryFileNames: 'localazy-api-client.umd.min.js',
+          entryFileNames: 'localazy-generic-connector-client.umd.min.js',
           banner,
           name: 'LocalazyCDN',
           esModule: false,

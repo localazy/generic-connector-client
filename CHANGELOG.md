@@ -1,3 +1,9 @@
+## 0.3.0 (2024-05-10)
+
+* ✨ feat: Add Zendesk integration (#10) ([a1fd672](https://github.com/localazy/generic-connector-client/commit/a1fd672)), closes [#10](https://github.com/localazy/generic-connector-client/issues/10)
+
+
+
 ## 0.2.3 (2024-04-22)
 
 ## 0.2.2 (2024-04-22)

@@ -6,4 +6,5 @@ export enum Services {
   'STORYBLOK' = 3,
   'INTERCOM' = 4,
   'DIRECTUS' = 5,
+  'ZENDESK' = 6,
 }

@@ -1,3 +1,9 @@
+# 0.4.0 (2026-04-29)
+
+### ✨ Features
+
+- Add IN_CONTEXT_EDITOR to Services enum ([b9e3144](https://github.com/localazy/generic-connector-client/commit/b9e3144))
+
 ## 0.3.0 (2024-05-10)
 
 * ✨ feat: Add Zendesk integration (#10) ([a1fd672](https://github.com/localazy/generic-connector-client/commit/a1fd672)), closes [#10](https://github.com/localazy/generic-connector-client/issues/10)

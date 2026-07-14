@@ -1,3 +1,20 @@
+# Changelog
+
+## 0.4.1 (2026-07-14)
+
+### 🔀 Merged Pull Requests
+- 🔧 fix: reassign IN_CONTEXT_EDITOR to plugin id 8 [#14](https://github.com/localazy/generic-connector-client/pull/14)
+- 🔧 chore: migrate to pnpm + Node 22 and adopt workflow-scripts release flow [#15](https://github.com/localazy/generic-connector-client/pull/15)
+
+### 🐛 Bug Fixes
+- reassign IN_CONTEXT_EDITOR to plugin id 8 (*[cbb9624](https://github.com/localazy/generic-connector-client/commit/cbb96247663eb20235f4335d7e13590b189f5447)*) (*[#14](https://github.com/localazy/generic-connector-client/pull/14)*)
+
+### 🧰 Other Commits
+- migrate to pnpm + Node 22 and adopt workflow-scripts release flow (*[c14ac7c](https://github.com/localazy/generic-connector-client/commit/c14ac7ce5c83e07475776594793dbc0a0fcc7d48)*) (*[#15](https://github.com/localazy/generic-connector-client/pull/15)*)
+
+### ❤️ Contributors
+- [*Daniel Charvat*](https://github.com/elisiondan)
+
 # 0.4.0 (2026-04-29)
 
 ### ✨ Features

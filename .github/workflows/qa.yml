@@ -7,28 +7,27 @@ on:
 
 jobs:
   qa:
-    name: Lint, Typecheck, Test and Build source files
+    name: Check and Build source files
     runs-on: [self-hosted, Linux]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          run_install: false
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
-      - name: Lint source files
-        run: npm run lint
-
-      - name: Run Prettier
-        run: npm run prettier
-
-      - name: Check types
-        run: npm run typecheck
+      - name: Check (typecheck + test + lint + prettier)
+        run: pnpm run check
 
       - name: Build package
-        run: npm run build
+        run: pnpm run build

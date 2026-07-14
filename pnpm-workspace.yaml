@@ -1,0 +1,6 @@
+# Which dependencies are allowed to run install scripts.
+allowBuilds:
+  # esbuild links its platform-native binary on install; Vite and Vitest rely on it.
+  esbuild: true
+  # core-js only prints a funding message on postinstall — no build needed.
+  core-js: false

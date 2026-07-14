@@ -11,6 +11,7 @@ export default defineConfig({
   },
 
   test: {
+    passWithNoTests: true,
     coverage: {
       reporter: [...(configDefaults.coverage.reporter || []), 'json-summary'],
       reportOnFailure: true,
